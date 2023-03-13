@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div id="nav-placeholder">
+        <script>
+            $(function () {
+                $.get("./nav.html", function (data) {
+                    const divider = '"about"'
+                    let parts = data.split(divider);
+                    $("#nav-placeholder").html(parts[0] + divider + ' class = "active"' + parts[1])
+                });
+                $.get("./website_name.html", function (data) {
+                    document.title = data + " - About"
+                });
+            });
+        </script>
+    </div>
+    <div class="regular-container">
+        <div class="main default_font page-element">
+            <h2>Brief</h2>
+            Remy Simulator is a test game, developed by group of friends,
+            while studying the basics of game development in unreal engine 5 using c++.
+            <br>
+            <br>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Saar Taler</td>
+                    <td>Manager and Developer</td>
+                </tr>
+                <tr>
+                    <td>Yahav Cohen</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Matanya Friedhaim</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Shoham Zeharya</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Eliav Alvertal</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Noam Drezner</td>
+                    <td>Designer</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <div id="footer-placeholder">
+        <script>
+            $(function () {
+                $("#footer-placeholder").load("footer.html");//put the html code here and modify it to fit the specific page
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div id="nav-placeholder">
+        <script>
+            $(function () {
+                $.get("./nav.html", function (data) {
+                    const divider = '"bugs"'
+                    let parts = data.split(divider);
+                    $("#nav-placeholder").html(parts[0] + divider + ' class = "active"' + parts[1])
+                });
+                $.get("./website_name.html", function (data) {
+                    document.title = data + " - Bugs"
+                });
+            });
+        </script>
+    </div>
+
+    <main class="regular-container default_font to-flex">
+        <div class="page-element">
+            <h3>Bug #1</h3>
+            <p>Hand won't point for the right direction while holding a weapon</p>
+            <img src="../images/bugs_images/HandDirectionBug.png" class="bug-image">
+        </div>
+        <div class="page-element">
+            <h3>Bug #2</h3>
+            <p>Players would fall through the ground after being eliminated</p>
+        </div>
+        <div class="page-element">
+            <h3>Bug #3</h3>
+            <p>Players can look inside their character in certain places and angles</p>
+            <img src="../images/bugs_images/surgery.png" class="bug-image">
+        </div>
+
+        <div class="page-element">
+            <h3>Bug #4</h3>
+            <p>Not exactly a bug, but players can go to the edge of the map and seem as if they are floating off the map.</p>
+            <img src="../images/bugs_images/atTheEdgeOfTheWorld.png" class="bug-image">
+        </div>
+    </main>
+
+
+    <div id="footer-placeholder">
+        <script>
+            $(function () {
+                $("#footer-placeholder").load("footer.html");//put the html code here and modify it to fit the specific page
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

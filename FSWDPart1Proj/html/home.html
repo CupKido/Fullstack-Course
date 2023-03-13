@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div id="nav-placeholder">
+        <script>
+            $(function () {
+                $.get("./nav.html", function (data) {
+                    const divider = '"home"'
+                    let parts = data.split(divider);
+                    $("#nav-placeholder").html(parts[0] + divider + ' class = "active"' + parts[1])
+                });
+                $.get("./website_name.html", function (data) {
+                    document.title = data
+                });
+            });
+        </script>
+    </div>
+
+    <main>
+
+        <div class="big-container">
+
+
+
+            <div class="left-container">
+                <div class="default_font page-element" id="Trailer1">
+                    <h3>
+                        Our inspiration:
+                    </h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/b8b1xLMEYi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p style="text-align: left;">was published on Apr 27, 2009</p>
+                </div>
+
+                <div class="default_font page-element list-element">
+                    <h2>Recent Updates:</h2>
+                    <ul class="updates-list">
+                        <li>
+                            <h4>V0.9.1</h4>
+                            <ul>
+                                <li>Fixed overhead username widget bug</li>
+                                <li>Added game state to keep track of winners</li>
+                                <li>Added match timer</li>
+                                <li>Added match cool down</li>
+                                <li>Added match restart</li>
+                            </ul>
+                            <h6>Nov 17, 2022</h6>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="right-container">
+                <div id="Events-List" class="default_font page-element list-element">
+
+
+                    <h2>Upcoming events:</h2>
+                    <ul>
+                        <li>8.12.22 - Monthly deving night (Remycon)</li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </main>
+
+    <div id="footer-placeholder">
+        <script>
+            $(function () {
+                $("#footer-placeholder").load("footer.html");//put the html code here and modify it to fit the specific page
+            });
+        </script>
+
+    </div>
+
+</body>
+
+</html>

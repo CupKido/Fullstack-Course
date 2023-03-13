@@ -1,0 +1,25 @@
+.big-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0%;
+    margin: 55px auto;
+    justify-content: center;
+}
+
+.left-container {
+    float: left;
+    max-width: 100%;
+    /* width: 900px; */
+    margin: 0px 0px 0px auto;
+    flex: 2;
+}
+
+.right-container {
+    float: left;
+    max-width: 100%;
+    margin: 0px auto 0px 0px;
+    flex: 1;
+}
+
